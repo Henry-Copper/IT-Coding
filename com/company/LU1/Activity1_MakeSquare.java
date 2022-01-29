@@ -7,7 +7,9 @@ public class Activity1_MakeSquare
 
    public static void main(String[] args)
    {
+   
    // program instructions go here
+   
    } // end of main method
    
 } // end of Activity1_MakeSquare class

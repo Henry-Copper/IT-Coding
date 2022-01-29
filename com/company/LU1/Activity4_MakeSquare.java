@@ -7,7 +7,9 @@ public class Activity4_MakeSquare
 
    public static void main(String[] args)
    {
+   
    Gogga bug = new Gogga();
+  
    bug.move();
    bug.move();
    bug.turnLeft();
@@ -20,6 +22,7 @@ public class Activity4_MakeSquare
    bug.move();
    bug.move();
    bug.turnLeft();
+
    } // end of main method
 
 } // end of Activity4_MakeSquare class
