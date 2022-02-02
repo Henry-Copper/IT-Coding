@@ -1,8 +1,8 @@
-// H Klopper 1 February 2022 LU1_Activity6
+// H Klopper 1 February 2022 LU1_Activity8
 
 import it.*;
 
-public class Activity6_MakeSquare
+public class Activity8_MakeSquare
 {
 
    public static void main(String[] args)
