@@ -4,7 +4,7 @@
 
 import it.*;
 
-public class LetterS
+public class Exercise3_LetterS
 {
 
    public static void main (String[] args)
