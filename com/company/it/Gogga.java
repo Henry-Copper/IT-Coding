@@ -40,8 +40,18 @@ public class Gogga {
         }
 
     }
+    
+    public void move(int y)
+    {
+    
+    for(int i = 0; i < y; i++)
+    {
+    move2();
+    }
+    
+    }
 
-    public void move() {
+    public void move2() {
         switch(this.direction) {
         case 1:
             if (this.yPos == 0) {
