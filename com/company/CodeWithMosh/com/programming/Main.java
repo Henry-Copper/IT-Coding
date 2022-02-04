@@ -2,12 +2,15 @@ package com.programming;
 
 import com.codewithmosh.*;
 
-public class Main
+public class Main extends TextBox
 {
 
    public static void main(String[] args)
    {
+   
    var textBox = new TextBox();
+   textBox.clear();
+   
    // control.disable();
 //    System.out.println(control.isEnabled());
 //    System.out.println(control.getClass());
@@ -26,5 +29,6 @@ public class Main
 //    
 //    System.out.println(box1.toString());
    }
+   
 
 }
