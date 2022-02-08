@@ -8,11 +8,37 @@ public class Activity1_MakeLabels
    public static void main (String[] args)
    {
    
-   System.out.println("****************");
-   System.out.println("Tina Farinha");
-   System.out.println("Geography");
-   System.out.println("****************");
+   // intantiate string array of names and subjects
+   String[] nameSubject = new String[]{"****************", "Tina Farinha", "Geography", "****************"};
    
-   } // method main
+   // try catch block to catch exceptions thrown by the FileWriter class upon instantiation or something like that that sounds correct
+    try
+   {
+      
+      // instantiate the filewriter object
+      FileWriter fw = new FileWriter("filename.txt");
 
-} // class MakeLabels
+      // clear the previous file by writing nothing
+      fw.write("");
+     
+      // iterate through the array and append each entry to the file
+      for(int i = 0; i < nameSubject.length; i++)
+      {
+      fw.append(nameSubject[i]);   
+      // escape code to create a new line for each entry
+      fw.append("\n");
+      }
+      
+      fw.close();
+   
+   }
+   
+   catch(IOException e)
+   {
+   // print message for exception thrown
+   System.out.println(e.getMessage());
+   }
+   
+   } // main method
+
+} // saveText class
