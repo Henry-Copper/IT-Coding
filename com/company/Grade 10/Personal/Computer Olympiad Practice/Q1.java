@@ -14,15 +14,11 @@ public class Q1
    
    System.out.print("Input the first number: ");
    int number1 = scanner.nextInt();
-   
-   System.out.print("Input the second number: ");
    int number2 = scanner.nextInt();
-
-   System.out.print("Input the third number: ");
    int number3 = scanner.nextInt();
-   
-   System.out.print("Input the fourth number: ");
    int number4 = scanner.nextInt();
+   
+     
    
    System.out.println(number1 * number4 - number2 * number3);
    }
