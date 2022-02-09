@@ -20,10 +20,15 @@ public class Activity1_MakeLabels
 
       // clear the previous file by writing nothing
       fw.write("");
-     
+           
       // iterate through the array and append each entry to the file
       for(int i = 0; i < nameSubject.length; i++)
       {
+      
+      // the actual printing to console; the purpose of the activity
+      System.out.println(nameSubject[i]);
+      
+      // my fun with writing to the file
       fw.append(nameSubject[i]);   
       // escape code to create a new line for each entry
       fw.append("\n");
@@ -41,4 +46,4 @@ public class Activity1_MakeLabels
    
    } // main method
 
-} // saveText class
+} // Activity1_MakeLabels class
