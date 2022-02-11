@@ -21,7 +21,7 @@ public class Activity1_MakeLabels
       // clear the previous file by writing nothing
       fw.write("");
            
-      // iterate through the array and append each entry to the file
+      // iterate through the array and append each element to the file
       for(int i = 0; i < nameSubject.length; i++)
       {
       
