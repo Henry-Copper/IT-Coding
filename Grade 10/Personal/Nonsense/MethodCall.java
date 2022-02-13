@@ -7,7 +7,8 @@ public class MethodCall
    System.out.println("hello1");
    } 
    public static void test(){
-   for(int i; i < 10; i++){
-   System.out.println("Hello2");
+   for(int i; i < 10; i++) {
+      System.out.println("Hello2");
+   }
    } // end of main method
 } // end of class MethodCall class

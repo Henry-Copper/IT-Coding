@@ -1,6 +1,5 @@
 // doesn't work
 
-import *.*;
 
 public class all
 {
