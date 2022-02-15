@@ -1,13 +1,9 @@
-package CheckpointQuestion17.src;// H Klopper Move Class
+// H Klopper 15 February 2022 LU1_Checkpoint2_Question17_MoveGogga
 
 import it.Gogga;
 
-public class MoveGogga
+public class Checkpoint2_Question17_MoveGogga
 {
-
-    public static void main(String[] args){
-
-    }
 
     public static void move(Gogga bug, int numTimes)
     {
