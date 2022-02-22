@@ -14,6 +14,7 @@ public class Activity3_Add2Numbers
    int num2 = Integer.parseInt(JOptionPane.showInputDialog("Type the second number"));
    
    // have to put the integers in brackets to ensure they are added to each other, not just concatenated to the string from left to right
+
    System.out.println("The sum of the number is " + (num1 + num2));
    
    } // main method
