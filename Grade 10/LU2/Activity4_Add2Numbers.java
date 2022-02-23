@@ -2,7 +2,7 @@
 
 import javax.swing.*;
 
-public class Exercise4_Add2Numbers
+public class Activity4_Add2Numbers
 {
 
    public static void main (String[] args)
