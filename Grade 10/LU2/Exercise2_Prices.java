@@ -21,16 +21,14 @@ public class Exercise2_Prices
   
    product3 = JOptionPane.showInputDialog("Please type in the third product's name");
    price3   = Double.parseDouble(JOptionPane.showInputDialog("Please type in the third product's price"));
-
-// why display a blank line?   
      
-     // display shopping list
-// why display a blank line?   
-     System.out.println("\n SHOPPING LIST");
-     System.out.println(String.format("%10s", product1 + "\t" + price1));
-     System.out.println(String.format("%10s", product2 + "\t" + price2));
-     System.out.println(String.format("%10s", product3 + "\t" + price3));
-   
+   // display shopping list
+   System.out.println("\nSHOPPING LIST");
+   System.out.println(String.format("%-15s %s", product1, price1));
+   System.out.println(String.format("%-15s %s", product2, price2));
+   System.out.println(String.format("%-15s %s", product3, price3));
+   System.out.println(String.format("%-15s %s", "TOTAL COST:", (price1 + price2 + price3)));
+  
    } // main method
 
 } // Exercise2_Prices class
