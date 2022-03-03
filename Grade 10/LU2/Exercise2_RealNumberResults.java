@@ -2,7 +2,7 @@
 
 import javax.swing.*;
 
-public class RealNumberResults
+public class Exercise2_RealNumberResults
 {
 
    public static void main(String[] args)
