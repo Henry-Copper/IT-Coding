@@ -1,8 +1,10 @@
 // Testing something
 
 import it.*;
+import java.awt.*;
 
-public class test
+
+public class ReservedWords
 {
 
    public static void main (String[] args)
@@ -12,6 +14,10 @@ public class test
    Gogga Gogga = new Gogga();
    
    Gogga.move();
+   
+   Gogga String = new Gogga();
+   
+   String.setColor(Color.blue);
    
    
    
