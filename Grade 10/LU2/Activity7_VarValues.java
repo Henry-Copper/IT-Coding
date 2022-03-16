@@ -8,6 +8,7 @@ public class Activity7_VarValues
    
    // Declaring variables
    
+   
    } // main method
 
 } // Activity7_VarValues class
