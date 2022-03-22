@@ -20,6 +20,6 @@ public class Activity1_Characters
    System.out.println(ch2);
    ch1++;
    System.out.println(ch1);
-   }
+   } // main method
 
-}
+} // Activity1_Characters class
