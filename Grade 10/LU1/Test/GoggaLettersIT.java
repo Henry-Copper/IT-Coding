@@ -1,3 +1,5 @@
+package Test;
+
 // Q 1.2
 // H Klopper 17 February 2022 Consolidation Day Task: Question 1
 
