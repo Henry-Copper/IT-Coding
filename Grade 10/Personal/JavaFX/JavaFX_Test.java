@@ -1,5 +1,4 @@
 // H Klopper 10 May 2022 JavaFX_Test
-package com.company;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
