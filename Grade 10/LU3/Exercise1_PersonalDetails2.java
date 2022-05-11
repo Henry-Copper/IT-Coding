@@ -33,7 +33,8 @@ for(String s : catStrings)
 appended += "\n" + s;
 }
 
-JOptionPane.showMessageDialog(null, appended); 
+// needs the string in the argument otherwise it's not happy
+JOptionPane.showMessageDialog(null, appended, "LOOK AT THIS INFORMATION!!!", JOptionPane.INFORMATION_MESSAGE); 
   
 
    
