@@ -6,6 +6,14 @@ public class Activity3_Strings
    public static void main (String [] args)
    {
    
+   // "Prediction"
+   // hello there
+// Line 1
+// Line2
+ // to
+// r
+ 
+   
    String s1 = "hello";
    String s2 = "there";
    System.out.println(s1 + ' ' + s2); // one space between ' '
