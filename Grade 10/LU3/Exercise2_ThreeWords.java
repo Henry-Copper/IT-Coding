@@ -1,7 +1,6 @@
-// H Klopper 15 May 2022 LU3_Exercise2
+// H Klopper 16 May 2022 LU3_Exercise2
 
 import javax.swing.*;
-import java.util.jar.JarEntry;
 
 public class Exercise2_ThreeWords {
 
