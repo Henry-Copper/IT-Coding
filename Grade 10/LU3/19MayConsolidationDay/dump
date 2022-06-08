@@ -1,0 +1,138 @@
+//        String[] splitExpression = expression.split("/|\\*|\\+|-");
+
+
+
+//        ArrayList<String> listExpression= new ArrayList<String>(Arrays.asList(splitExpression));
+//
+//        for (int i = 0; i > listExpression.size(); i++){
+//            String toCalculate = listExpression.get(i);
+//    if(toCalculate.equalsIgnoreCase("*")){
+//    int position = listExpression.indexOf(toCalculate);
+//    String leftOp = listExpression.get(position - 1);
+//    String rightOp = listExpression.get(position + 1);
+//    double leftOperand = Double.parseDouble(listExpression.get(position - 1));
+//    double rightOperand = Double.parseDouble(listExpression.get(position + 1));
+//    double result = leftOperand * rightOperand;
+//    listExpression.remove(toCalculate);
+//    listExpression.remove(leftOp);
+//    listExpression.remove(rightOp);
+//    listExpression.add(0, Double.toString(result));
+//    }
+    //  switch (splitExpression[i]){
+////               case "/":
+////                   double leftOperand = Double.parseDouble(splitExpression[i - 1]);
+////                   double rightOperand = Double.parseDouble(splitExpression[i + 1]);
+////                   System.out.println(leftOperand / rightOperand);
+////                   break;
+////               case "*":
+////
+////               case "+":
+////
+////               case "-":
+////
+////               default:
+////
+////
+////           }
+
+//
+//        System.out.println(Arrays.toString(splitExpression));
+
+    public static void main(String[] args) {
+        System.out.print("Please enter an expression to evaluate (note, you cannot use brackets): ");
+        String expressionWithWhitespace = new Scanner(System.in).nextLine();
+        String expression = expressionWithWhitespace;
+
+    while(expression.contains(" ")) {
+        expression = expressionWithWhitespace.replaceAll(" ", "");
+    }
+
+        String[] splitExpression = expression.split(
+                "((?<=/)|(?=/))" +
+                        "|((?<=\\*)|(?=\\*))" +
+                        "|((?<=\\+)|(?=\\+))" +
+                        "|((?<=\\-)|(?=\\-))");
+        listExpression = new ArrayList<>(Arrays.asList(splitExpression));
+
+        double result = 0;
+        for (int i = 0; i < listExpression.size(); i++) {
+            result = doOperationsAccordingToBODMAS();
+        }
+        System.out.println(expressionWithWhitespace + " = " + result);
+
+    } // main method
+
+    public static double doOperationsAccordingToBODMAS() {
+        int indexOfDivideOperator = doesExist(listExpression.indexOf("*"));
+        int indexOfMultiplyOperator = doesExist(listExpression.indexOf("/"));
+        if (indexOfDivideOperator < indexOfMultiplyOperator) {
+            return simpleOperation(indexOfDivideOperator);
+        } else if (indexOfMultiplyOperator < indexOfDivideOperator) {
+            return simpleOperation(indexOfMultiplyOperator);
+        } else if (indexOfMultiplyOperator == indexOfDivideOperator) {
+            int indexOfMinusOperator = doesExist(listExpression.indexOf("-"));
+            int indexOfPlusOperator = doesExist(listExpression.indexOf("+"));
+            if (indexOfMinusOperator < indexOfPlusOperator) {
+                return simpleOperation(indexOfMinusOperator);
+            } else if (indexOfPlusOperator < indexOfMinusOperator) {
+                return simpleOperation(indexOfPlusOperator);
+            } else {
+                System.out.println("There was no valid operator.");
+            }
+        }
+        return 0;
+    } // doOperationsAccordingToBODMAS method
+
+    public static double simpleOperation(int indexOfOperator){
+        // check if it is a character or whether it is a number
+        try{
+            Double.parseDouble(listExpression.get(indexOfOperator));
+        }
+        // if not a number, therefor a character as an operator
+        catch (Exception e){
+            int indexOfLeftOperand = indexOfOperator - 1;
+            int indexOfRightOperand = indexOfOperator  + 1;
+            String operator = listExpression.get(indexOfOperator);
+
+            double leftOperand = Double.parseDouble(listExpression.get(indexOfLeftOperand));
+            double rightOperand = Double.parseDouble(listExpression.get(indexOfRightOperand));
+
+            // remove the operator and the operands for the future iterations
+//            listExpression.remove(indexOfLeftOperand);
+//            listExpression.remove(indexOfLeftOperand);
+//            listExpression.remove(indexOfLeftOperand);
+
+            RemoveItems.removeItemsFromList(listExpression, indexOfLeftOperand, indexOfLeftOperand, indexOfLeftOperand);
+
+            switch (operator){
+                case "*":
+                    double resultOfMultiply = leftOperand * rightOperand;
+                    listExpression.add(indexOfLeftOperand, Double.toString(resultOfMultiply));
+                    return resultOfMultiply;
+                case "/":
+                    double resultOfDivide = leftOperand / rightOperand;
+                    listExpression.add(indexOfLeftOperand, Double.toString(resultOfDivide));
+                    return resultOfDivide;
+                case "+":
+                    double resultOfAdd = leftOperand + rightOperand;
+                    listExpression.add(indexOfLeftOperand, Double.toString(resultOfAdd));
+                    return resultOfAdd;
+                case "-":
+                    double resultOfSubstract = leftOperand - rightOperand;
+                    listExpression.add(indexOfLeftOperand, Double.toString(resultOfSubstract));
+                    return resultOfSubstract;
+            }
+        }
+        return 0;
+    } // simpleOperation method
+
+    // method that checks if the operator does exist within the ArrayList; if not, make it the size of the list to ensure the if statement in the method "doOperationsAccordingToBODMAS" evaluates such that it uses the operator that does actually exist
+    public static int doesExist(int index){
+        if (index == -1){
+            return listExpression.size();
+        }
+        else
+        {
+            return index;
+        }
+    } // doesExist method

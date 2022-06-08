@@ -1,6 +1,9 @@
-// H Klopper 16 May 2022 LU3_Exercise2
+// H Klopper 15 May 2022 LU3_Exercise2
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
+import java.util.jar.JarEntry;
+
+import static javax.swing.JOptionPane.showInputDialog;
 
 public class Exercise2_ThreeWords {
 
@@ -8,7 +11,7 @@ public class Exercise2_ThreeWords {
     static String[] separateWords;
 
     public static void main (String[] args){
-        inputs = JOptionPane.showInputDialog("Please enter three words separated by spaces");
+        inputs = showInputDialog("Please enter three words separated by spaces");
         separateWords = inputs.split(" ");
         int totalChars = 0;
 
@@ -16,6 +19,11 @@ public class Exercise2_ThreeWords {
             System.out.println('"' + word + "\" has " + word.length() + " character(s) in it.");
             totalChars += word.length();
         }
+
+        double num = (32%7)*(26/8);
+        System.out.println(32%7);
+        System.out.println(26/8);
+        System.out.println(num);
 
         System.out.println("In total you typed " + totalChars + " characters (not including whitespaces).");
     } // main method
