@@ -32,7 +32,7 @@ public class FavouriteFruit {
             System.out.print("Name: ");
             // consume the \n so that the name actually takes the input????
             input.nextLine();
-            fruit.setFruitName(input.next());
+            fruit.setFruitName(input.nextLine());
             System.out.print("Rating (out of 10): ");
             try {
                 int currentRating = input.nextInt();
